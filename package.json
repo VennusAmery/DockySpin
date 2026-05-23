@@ -5,16 +5,20 @@
   "homepage": "https://VennusAmery.github.io/DatingSpin/",
   "dependencies": {
     "@supabase/supabase-js": "^2.100.1",
-    "axios": "^1.13.6",
+    "axios": "^1.16.1",
     "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:frontend": "react-scripts start",
+    "start:backend": "node server/index.js",
+    "dev": "pnpm concurrently \"pnpm start:frontend\" \"pnpm start:backend\"",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
+    "predeploy": "pnpm run build",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
@@ -30,6 +34,8 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^25.9.1",
+    "concurrently": "^9.2.1",
     "gh-pages": "^6.3.0"
   }
 }

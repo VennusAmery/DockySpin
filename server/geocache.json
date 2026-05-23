@@ -60,5 +60,15 @@
   "Centro Cultural \"Miguel Ángel Asturias\", 24 calle 3-81 de la zona 1, CIUDAD DE GUATEMALA": {
     "latitude": 14.6252716,
     "longitude": -90.5188639
+  },
+  "Museo Ixchel , 6ta calle final, zona 10. (interior Universidad Francisco Marroquín), CIUDAD DE GUATEMALA": null,
+  "virtual , CIUDAD DE GUATEMALA": null,
+  "Cine Capitol ,  6a Avenida 12-51, Zona 1, CIUDAD DE GUATEMALA": {
+    "latitude": 14.6368919,
+    "longitude": -90.510237
+  },
+  "Teatro de cámara \"Hugo Carrillo\", 24 calle 3-81 zona 1, Centro Cultural Miguel Ángel Asturias, CIUDAD DE GUATEMALA": {
+    "latitude": 14.6274098,
+    "longitude": -90.5171572
   }
 }

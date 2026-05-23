@@ -3,22 +3,31 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # O 'master', asegúrate de que sea tu rama principal
+      - main  
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
 
       - name: Install and Build
         run: |
-          npm install
-          npm run build
+          pnpm install
+          pnpm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # La carpeta que creó react-scripts
-          branch: gh-pages # La rama donde se subirá el sitio
+          folder: build 
+          branch: gh-pages 
